@@ -343,3 +343,11 @@ footer {
 	justify-content: center;
 	align-self: center;
 }
+
+@media (max-width: 800px) {
+    
+}
+
+@media (max-width: 500px) {
+
+}
