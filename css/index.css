@@ -110,6 +110,22 @@ body {
 	align-items: center;
 }
 
+.flex-content-column1 {
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	width: 49%;
+}
+
+.flex-content-column2 {
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	width: 30%;
+}
+
 .flex-center {
 	display: flex;
 	justify-content: center;
@@ -127,6 +143,7 @@ a {
 	display: inline-block;
 	overflow: hidden;
 	position: fixed;
+	z-index: 0;
 	top: 0;
 	background-color: #fff;
 	padding: 1.5% 0% 1.5%;
@@ -138,6 +155,7 @@ a {
 
 .navi-img-container {
 	position: fixed;
+	z-index: 1;
 	top: 0;
 	margin-left: 64.1%;
 	padding-top: 0.5%;
@@ -161,7 +179,7 @@ a {
 	justify-content: center;
 	align-content: center;
 	align-items: center;
-	margin-left: 10%;
+	margin: 0 auto;
 }
 
 .featured-content h1 {
@@ -191,13 +209,15 @@ a {
 .featured-content img {
 	display: flex;
 	justify-content: flex-end;
-	margin: 0 10% 0;
+	/* margin: 0 10% 0; */
 	width: 480px;
 }
 
 .content-container {
 	border-top: 1px solid #333;
 	border-bottom: 1px solid #333;
+	margin: 0 auto;
+	justify-content: space-evenly;
 }
 
 .middle-img {
@@ -205,7 +225,11 @@ a {
 }
 
 .column1-container {
-	margin: 2% 0% 1%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	padding: 2% 0% 2%;
 }
 
 .column2-container {
@@ -222,13 +246,21 @@ address li {
 	list-style: none;
 }
 
+.contact {
+	margin-top: 3%;
+}
+
 .contact li {
 	width: 200px;
 	margin: 15px 0px 15px;
 }
 
 footer p {
-	margin: 3% 0% 9%;
+	margin: 0 auto;
+	padding: 2%;
+	display: flex;
+	justify-content: center;
+	align-self: flex-end;
 }
 
 .copyright {
@@ -238,6 +270,7 @@ footer p {
 	height: 30%%;
 	width: 100%;
 }
+
 
 /* SERVICES.HTML */
 
@@ -262,7 +295,6 @@ footer p {
 
 
 .main-content-container {
-	height: 100%;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
@@ -338,16 +370,166 @@ footer p {
 }
 
 
-footer {
+footer p {
 	display: flex;
 	justify-content: center;
-	align-self: center;
+	align-self: flex-end;
 }
 
+
+/* ----  TABLET VIEW ---- */
 @media (max-width: 800px) {
-    
+	.body-flex-container {
+		display: flex;
+		flex-direction: column;
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	.navi-bar nav ul {
+		padding-top: 10%;
+		width: 95%;
+		font-size: 13.5px;
+
+	}
+
+	.navi-img-container {
+		margin-left: 37%;
+		padding-top: 2.5%;
+
+
+	}
+
+	.featured-content {
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		margin-top: 20%;
+	}
+
+	.featured-content-left {
+		margin-bottom: 12%;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	.featured-content h1 {
+		font-size: 90px;
+		height: 270px;
+		width: 350px;
+		text-align: center;
+	}
+
+	.featured-content img {
+		display: none;
+	}
+
+	.flex-content-column1 {
+		width: 48%;
+	}
+
+	.flex-content-column2 {
+		width: 30%;
+	}
 }
 
+/* ----  MOBILE VIEW ---- */
 @media (max-width: 500px) {
 
+	.body-flex-container {
+		width: 100%;
+	}
+
+	.navi-bar {
+		height: 400px;	
+	}
+
+	.navi-img-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-self: center;
+		margin: 0 auto;
+		padding: 2% 0 2%;
+		width: 100%;
+		border-bottom: #333 solid 1px;
+
+	}
+
+	.navi-bar nav ul {
+		position: relative;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		flex: 1;
+		padding: 0;
+		border: none;
+		color: lightgray;
+		font-size: 14px;
+		text-align: center;
+	}
+
+	.navi-bar nav {
+		display: flex;
+		flex: 1;
+		height: 100px;
+
+	}
+
+	.navi-bar ul {
+		height: 400px;
+	}
+
+	.navi-bar a {
+		width: 100%;
+		margin: 0 auto;
+		padding: 5%;
+		border-bottom: #333 solid 1px;
+	}
+
+	.content-container {
+		width: 95%;
+		border-top: 2px solid #333;
+		border-bottom: 2px solid #333;
+	}
+
+	.column1-container {
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 7% 0% 7%;
+	}
+
+	.flex-content-column1 {
+		flex-direction: column;
+		padding: 2% 0 2%;
+		width: 100%;
+		margin: 0;
+	}
+
+	.column2-container {
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		padding: 7% 0% 7%;
+	}
+
+	.flex-content-column2 {
+		flex-direction: column;
+		padding: 2% 0 2%;
+		width: 100%;
+		margin: 0;
+	}
+
+	.contact {
+		width: 95%;
+		margin: 0 auto;
+		padding: 5% 0 5%;
+	}
+
+	.copyright p {
+		display: flex;
+		align-self: flex-end;
+	}
 }
